@@ -5,7 +5,7 @@ This guide will help you set up, develop, and test Automation OS locally on your
 ## 1. Prerequisites
 
 Before setting up the project, make sure you have the following installed:
-* **Node.js** (v18.0.0 or higher)
+* **Node.js** (v22.5.0 or higher, required for native `node:sqlite`'s `DatabaseSync` support)
 * **Redis Server** (for BullMQ queues)
 * **Python** (v3.8+; required only if running native `pywinauto` adapters)
 * **Java** (v11+; required only if running visual `OculiX` automation modules)

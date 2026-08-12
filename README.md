@@ -55,7 +55,7 @@ Refer to our detailed documentation for more details:
 
 ## Development Requirements
 
-- **Node.js** v18+
+- **Node.js** v22.5.0+ (requires native sqlite DatabaseSync support)
 - **Redis** (for BullMQ queues)
-- **SQLite** (local database engine)
+- **SQLite** (local database engine via node:sqlite)
 - **TypeScript** (Strict Mode)

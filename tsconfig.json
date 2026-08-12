@@ -35,6 +35,7 @@
     { "path": "packages/shared-utils" },
     { "path": "packages/config" },
     { "path": "packages/event-contracts" },
-    { "path": "packages/testing" }
+    { "path": "packages/testing" },
+    { "path": "services/auth-service" }
   ]
 }

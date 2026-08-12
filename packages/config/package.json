@@ -1,0 +1,16 @@
+{
+  "name": "@automation-os/config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@automation-os/shared-types": "workspace:*",
+    "@automation-os/shared-utils": "workspace:*",
+    "zod": "^3.21.4"
+  }
+}

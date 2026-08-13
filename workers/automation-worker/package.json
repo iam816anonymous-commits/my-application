@@ -1,0 +1,22 @@
+{
+  "name": "@automation-os/automation-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@automation-os/config": "workspace:*",
+    "@automation-os/shared-types": "workspace:*",
+    "@automation-os/shared-utils": "workspace:*",
+    "@automation-os/workflow-engine": "workspace:*",
+    "bullmq": "^4.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
+}

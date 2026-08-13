@@ -1,7 +1,6 @@
 {
   "name": "automation-os",
   "version": "1.0.0",
-  "description": "Automation OS - robust, local-first automation platform",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -28,7 +27,8 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "esbuild",
+      "msgpackr-extract"
     ]
   }
 }

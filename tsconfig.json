@@ -27,7 +27,8 @@
       "@automation-os/shared-utils": ["packages/shared-utils/src/index.ts"],
       "@automation-os/config": ["packages/config/src/index.ts"],
       "@automation-os/event-contracts": ["packages/event-contracts/src/index.ts"],
-      "@automation-os/testing": ["packages/testing/src/index.ts"]
+      "@automation-os/testing": ["packages/testing/src/index.ts"],
+      "@automation-os/workflow-engine": ["packages/workflow-engine/src/index.ts"]
     }
   },
   "references": [
@@ -36,6 +37,8 @@
     { "path": "packages/config" },
     { "path": "packages/event-contracts" },
     { "path": "packages/testing" },
-    { "path": "services/auth-service" }
+    { "path": "services/auth-service" },
+    { "path": "packages/workflow-engine" },
+    { "path": "workers/automation-worker" }
   ]
 }

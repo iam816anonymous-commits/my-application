@@ -2,7 +2,8 @@ import { Queue, Worker, Job } from 'bullmq';
 import { config } from '@automation-os/config';
 import { Execution, WorkflowVersion, WorkflowStep, ExecutionStep, Evidence } from '@automation-os/shared-types';
 import { generateId, StructuredLogger } from '@automation-os/shared-utils';
-import { WorkflowExecutorPipeline, IAutomationAdapter, IVerificationEngine, IPolicyEngine, ExecutionState } from '@automation-os/workflow-engine';
+import { WorkflowExecutorPipeline, IAutomationAdapter, IPolicyEngine, ExecutionState } from '@automation-os/workflow-engine';
+import { VerificationEngine } from '@automation-os/verification-engine';
 
 const logger = new StructuredLogger('AutomationWorker');
 
@@ -12,24 +13,6 @@ export interface JobPayload {
   workflowVersionId: string;
   idempotencyKey?: string;
   triggeredBy: string;
-}
-
-/**
- * Mock Verification Engine implementation
- */
-export class SimpleVerificationEngine implements IVerificationEngine {
-  public async verify(
-    step: WorkflowStep,
-    _evidence?: Evidence,
-  ): Promise<{ passed: boolean; logs: string[]; error?: string }> {
-    logger.info(`Verification Engine evaluating step: ${step.id}`);
-
-    // For now, always pass if verification spec type is matched
-    return {
-      passed: true,
-      logs: [`[VERIFIER] Successfully verified state: ${step.verification?.type || 'default_action'}`],
-    };
-  }
 }
 
 /**
@@ -225,7 +208,7 @@ export class AutomationWorker {
     };
 
     const mockAdapter = new SimpleMockAdapter();
-    const verifier = new SimpleVerificationEngine();
+    const verifier = new VerificationEngine();
     const policyEngine = new SimplePolicyEngine();
 
     const pipeline = new WorkflowExecutorPipeline(execution, version, {

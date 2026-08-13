@@ -28,7 +28,8 @@
       "@automation-os/config": ["packages/config/src/index.ts"],
       "@automation-os/event-contracts": ["packages/event-contracts/src/index.ts"],
       "@automation-os/testing": ["packages/testing/src/index.ts"],
-      "@automation-os/workflow-engine": ["packages/workflow-engine/src/index.ts"]
+      "@automation-os/workflow-engine": ["packages/workflow-engine/src/index.ts"],
+      "@automation-os/verification-engine": ["packages/verification-engine/src/index.ts"]
     }
   },
   "references": [
@@ -39,6 +40,9 @@
     { "path": "packages/testing" },
     { "path": "services/auth-service" },
     { "path": "packages/workflow-engine" },
-    { "path": "workers/automation-worker" }
+    { "path": "workers/automation-worker" },
+    { "path": "packages/verification-engine" },
+    { "path": "apps/gateway" },
+    { "path": "services/automation-service" }
   ]
 }

@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "test": "tsx --test packages/*/tests/*.test.ts services/*/tests/*.test.ts workers/*/tests/*.test.ts adapters/*/tests/*.test.ts",
+    "test": "tsx --test packages/*/tests/*.test.ts services/*/tests/*.test.ts workers/*/tests/*.test.ts adapters/*/tests/*.test.ts apps/*/tests/*.test.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"**/*.ts\""
   },

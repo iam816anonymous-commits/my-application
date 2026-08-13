@@ -8,8 +8,6 @@
   "references": [
     { "path": "../../packages/shared-types" },
     { "path": "../../packages/shared-utils" },
-    { "path": "../../packages/config" },
-    { "path": "../../packages/workflow-engine" },
-    { "path": "../../packages/verification-engine" }
+    { "path": "../../packages/config" }
   ]
 }

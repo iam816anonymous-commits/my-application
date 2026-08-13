@@ -33,6 +33,31 @@ importers:
         specifier: ^3.21.4
         version: 3.25.76
 
+  apps/gateway:
+    dependencies:
+      '@automation-os/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@automation-os/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@automation-os/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+      express:
+        specifier: ^4.18.2
+        version: 4.22.2
+      jsonwebtoken:
+        specifier: ^9.0.0
+        version: 9.0.3
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.25
+      '@types/jsonwebtoken':
+        specifier: ^9.0.2
+        version: 9.0.10
+
   packages/config:
     dependencies:
       '@automation-os/shared-types':
@@ -60,6 +85,15 @@ importers:
         version: link:../shared-types
 
   packages/testing:
+    dependencies:
+      '@automation-os/shared-types':
+        specifier: workspace:*
+        version: link:../shared-types
+      '@automation-os/shared-utils':
+        specifier: workspace:*
+        version: link:../shared-utils
+
+  packages/verification-engine:
     dependencies:
       '@automation-os/shared-types':
         specifier: workspace:*
@@ -105,6 +139,31 @@ importers:
         specifier: ^9.0.2
         version: 9.0.10
 
+  services/automation-service:
+    dependencies:
+      '@automation-os/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@automation-os/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@automation-os/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+      express:
+        specifier: ^4.18.2
+        version: 4.22.2
+      jsonwebtoken:
+        specifier: ^9.0.0
+        version: 9.0.3
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.25
+      '@types/jsonwebtoken':
+        specifier: ^9.0.2
+        version: 9.0.10
+
   workers/automation-worker:
     dependencies:
       '@automation-os/config':
@@ -116,6 +175,9 @@ importers:
       '@automation-os/shared-utils':
         specifier: workspace:*
         version: link:../../packages/shared-utils
+      '@automation-os/verification-engine':
+        specifier: workspace:*
+        version: link:../../packages/verification-engine
       '@automation-os/workflow-engine':
         specifier: workspace:*
         version: link:../../packages/workflow-engine
